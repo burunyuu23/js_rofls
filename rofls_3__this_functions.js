@@ -1,3 +1,5 @@
+"use strict";
+
 var obj = {
     name: 'dnlkk!',
     hi: function () {
@@ -25,7 +27,7 @@ obj.hi = function () {
 }
 
 var LOL = new obj.hi
-LOL() // this === obj.hi{}
+LOL() // this === obj.hi {}
 
 obj2.hi = obj.hi;
 
@@ -47,7 +49,7 @@ obj.hi = function () {
 obj2.hi = obj.hi;
 
 
-obj2.hi()(); // this === global object nodejs: Object [global], browser: window
+obj2.hi()(); // this === global object nodejs: Object [global], browser: window || in "strict mode" undefined (LOOOOOOOOOOOLLLLLLLLLLL)
 
 setTimeout(obj2.hi(), 1); // nodejs: Timeout, browser: Window
 
